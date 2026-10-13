@@ -2,6 +2,7 @@ package com.bookit_service.entity;
 
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "seats",
@@ -10,7 +11,9 @@ import jakarta.persistence.*;
                 columnNames = {"show_id","seat_number"}
         )
 )
-
+@Getter
+@Setter
+@NoArgsConstructor
 public class Seat {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
